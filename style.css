@@ -16,7 +16,7 @@ SRM CGPA Calculator CSS Start
   --srm-calc-radius: 3px;
   --srm-calc-spacing: 1.5rem;
   --srm-calc-gap: 0.65rem;
-  --srm-calc-width: 900px;
+  --srm-calc-width: 100%;
   --srm-calc-font-size: 16px;
 }
 
