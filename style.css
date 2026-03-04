@@ -1,0 +1,180 @@
+/* ==============================
+SRM CGPA Calculator CSS Start
+================================= */
+:root {
+  --srm-calc-accent: #4361ee;
+  --srm-calc-accent-deep: #3a56d4;
+  --srm-calc-accent-light: #e6f0ff;
+  --srm-calc-text: #2b2d42;
+  --srm-calc-bg: #f8f9fa;
+  --srm-calc-white: #ffffff;
+  --srm-calc-border: #e0e3e7;
+  --srm-calc-danger: #e74c3c;
+  --srm-calc-danger-deep: #bd3324;
+  --srm-calc-success: #2ecc71;
+  --srm-calc-success-deep: #27ae60;
+  --srm-calc-radius: 3px;
+  --srm-calc-spacing: 1.5rem;
+  --srm-calc-gap: 0.65rem;
+  --srm-calc-width: 900px;
+  --srm-calc-font-size: 16px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* ======== Semester section ======== */
+.srm-calc-semester {
+  background-color: var(--srm-calc-white);
+  border: 1px solid var(--srm-calc-border);
+  border-radius: var(--srm-calc-radius);
+  margin-bottom: var(--srm-calc-spacing);
+  padding: var(--srm-calc-spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--srm-calc-gap);
+}
+
+.srm-calc-semester-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.srm-calc-semester-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* ======== Course rows ======== */
+.srm-calc-course-row {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr auto;
+  gap: var(--srm-calc-gap);
+  align-items: center;
+}
+
+/* ======== Credit container holds the credit select and optional custom input ======== */
+.srm-calc-credit-container {
+  display: flex;
+  gap: var(--srm-calc-gap);
+}
+
+/* ======== Custom credit input is hidden by default and shown when the user selects the custom option ======== */
+.srm-calc-custom-credit {
+  display: none;
+}
+
+.srm-calc-remove-course {
+  background-color: var(--srm-calc-danger) !important;
+  color: var(--srm-calc-white) !important;
+  border: none;
+  padding: 0 15px 0 15px !important;
+  border-radius: var(--srm-calc-radius);
+  cursor: pointer;
+  font-weight: 600 !important;
+  font-size: 1.2rem;
+  height: 45px !important;
+}
+
+.button-spacer {
+  display: flex;
+  gap: var(--srm-calc-gap);
+}
+
+/* ======== Results section ======== */
+.srm-calc-results {
+  background-color: var(--srm-calc-white);
+  border: 1px solid var(--srm-calc-border);
+  border-radius: var(--srm-calc-radius);
+  margin-top: var(--srm-calc-spacing);
+  padding: var(--srm-calc-spacing);
+  display: none;
+}
+
+.srm-calc-results h2 {
+  margin-top: 0;
+  margin-bottom: var(--srm-calc-gap);
+}
+
+.srm-calc-results table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--srm-calc-border);
+  margin-bottom: var(--srm-calc-gap);
+}
+
+.srm-calc-results th,
+.srm-calc-results td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--srm-calc-border);
+  border: 1px solid var(--srm-calc-border);
+}
+
+.srm-calc-results tr:last-child td {
+  border-bottom: none;
+}
+
+.srm-calc-results-summary {
+  font-weight: 600;
+  margin-top: var(--srm-calc-gap);
+}
+
+/* ======== Actions section ======== */
+.srm-calc-actions {
+  display: none;
+  margin-top: var(--srm-calc-gap);
+  gap: var(--srm-calc-gap);
+}
+
+.srm-calc-remove-semester{
+  border-radius: 50%;
+  border: 1px solid var(--srm-calc-danger);
+  background-color: var(--srm-calc-white);
+  color: var(--srm-calc-danger) !important;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+/* ======== Validation messages ======== */
+.srm-calc-error {
+  color: var(--srm-calc-danger);
+  font-size: 0.875rem;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* ======== Responsive design ======== */
+@media (max-width: 600px) {
+  .srm-calc-course-row {
+    grid-template-columns: 1fr;
+  }
+  .srm-calc-remove-course {
+    justify-self: flex-end;
+  }
+}
+
+@media (max-width: 400px) {
+  .srm-pdf-btn,
+  .srm-copy-btn,
+  .srm-reset-btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .button-spacer {
+    flex-direction: column;
+  }
+  .srm-add-semester,
+  .srm-calc-btn {
+    display: block;
+    width: 100% !important;
+  }
+}
+/* ==============================
+SRM CGPA Calculator CSS End
+================================= */
